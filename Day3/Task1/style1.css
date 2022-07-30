@@ -1,0 +1,12 @@
+body
+{
+    background-color: black;
+}
+h1{
+    background-color: gray;
+    color: aliceblue;
+    padding-left: 20px;
+}
+li{
+    color: #fff;
+}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Search{% endblock %}
+
+{% block hdr %}Search by name or city{% endblock %}
+
+{% block content %}
+
+<div align="center">
+    <form class="d-flex" role="search" method="post" style="width: 50%;">
+        <input class="form-control me-2" required type="search" placeholder="Search" aria-label="Search" name="search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+</div>
+<br>
+<br>
+{% if rows == None %}
+<h4 style="text-align: center;">We cannot find it, Try again.</h4>
+{% else %}
+<table class="table table-striped" style="width: 90%;" align="center">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">City</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows: %}
+      <tr>
+        <td>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+        <td>{{row[3]}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endif %}
+
+{% endblock %}

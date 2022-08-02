@@ -1,4 +1,3 @@
-from unicodedata import name
 from flask import redirect, request, url_for
 from flask import Flask
 from flask import render_template

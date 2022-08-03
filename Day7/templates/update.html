@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Update{% endblock %}
+
+{% block hdr %}Update student information{% endblock %}
+
+{% block content %}
+<div align="center">
+    <form method="post" style="width: 60%;">
+        <div class="mb-3 row">
+            <label for="name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name..." value="{{row[1]}}">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="age" class="col-sm-2 col-form-label">Age</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="age" name="age" placeholder="Enter your age..." value="{{row[2]}}">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="city" class="col-sm-2 col-form-label">City</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="city" name="city" placeholder="Enter your city..." value="{{row[3]}}">
+            </div>
+          </div>
+    
+          <button type="submit" class="btn btn-outline-success">Update</button>
+    </form>
+</div>
+
+{% endblock %}

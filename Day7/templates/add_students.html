@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Add students{% endblock %}
+
+{% block hdr %}Fill this form{% endblock %}
+
+{% block content %}
+<div align="center">
+    <form method="post" style="width: 60%;">
+        <div class="mb-3 row">
+            <label for="name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name...">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="age" class="col-sm-2 col-form-label">Age</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="age" name="age" placeholder="Enter your age...">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="city" class="col-sm-2 col-form-label">City</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="city" name="city" placeholder="Enter your city...">
+            </div>
+          </div>
+    
+          <button type="submit" class="btn form-control-sm">Add</button>
+    </form>
+</div>
+
+{% endblock %}
